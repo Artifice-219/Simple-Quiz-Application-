@@ -21,3 +21,29 @@ class Question:
     
     def get_answer(self):
         return self.correct_answer
+
+
+class User:
+    def __init__(self, name):
+        #TODO 6 : HAVE SOME DEFAULT VALUES FOR THE NAME HERE
+        self.name = name
+        # default values
+        self.score = 0
+        self.life = 3
+
+    # setter
+    def set_name(self, new_name):
+        self.name = new_name
+    
+    def add_score(self, score_increment):
+        self.score += score_increment
+    
+    # getters
+    def get_score(self):
+        return self.score
+    
+    def get_name(self):
+        return self.name
+    
+    def get_life(self):
+        return self.life
