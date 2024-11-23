@@ -47,3 +47,16 @@ class User:
     
     def get_life(self):
         return self.life
+
+
+# main container
+questions = []
+
+
+
+def main():
+    print('Game starts')
+
+
+
+main()
