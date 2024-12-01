@@ -9,7 +9,7 @@ class Question:
     def get_question(self):
         return self.question
     
-    def print_choices(self):
+    def get_choices(self):
         # most likely you are going to format this shit
         return self.choices
     
@@ -20,7 +20,14 @@ class Question:
         return self.question_type
     
     def get_answer(self):
-        return self.correct_answer
+        letters = ['a','b','c','d']
+        current_index = 0
+
+        for item in self.choices:
+            if(item == self.correct_answer):
+                return letters[current_index]
+            current_index += 1
+            # TODO 18 : As this is a playsafe approach make sure this shit works
 
 
 class User:

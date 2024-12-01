@@ -1,3 +1,5 @@
+import sys
+import random
 from Classes import *
 
 # main container
@@ -52,6 +54,9 @@ questions.append(question_6)
 
 
 # TODO 15 : GET THIS FUNCTIONS ON THIER OWN FILE
+def throw_question():
+    index = random.randint(0,len(questions)-1)
+    return questions[index]
 
 def get_userDetails():
     username = str(input('Youre username ? : '))
@@ -62,10 +67,36 @@ def get_userDetails():
     print(f'Hello there  {new_user.get_name()}')
 
 def main():
+    choice = str(input(f'Would you like to play ? : ( y/n )')).lower()
+
+    if(choice == 'n'):
+        sys.exit()
+
+
     print('Game starts')
-
     get_userDetails()
+    current_question = throw_question()
 
+    print(current_question.get_question())
 
+    # pretty printing the choices for current_question
+    letters = ['A', 'B', 'C', 'D']
+    letters_index = 0
 
-main()
+    for choice in current_question.get_choices():
+        print(f'{letters[letters_index]} {choice}')
+        letters_index += 1
+
+        # loop back the letters index to not be out of bounds
+        if(letters_index > len(letters)-1):
+            letters_index = 0
+
+    # get answers here
+    player_answer = str(input('Youre answer ? : ')).lower()
+
+    if(player_answer != current_question.get_answer()):
+        print(f'Incorrect the answer is {current_question.get_answer()}')
+        print(f'Youre answer is {player_answer}')
+    else:
+        print(f'Correct ')
+main(),

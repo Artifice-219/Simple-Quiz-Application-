@@ -1,9 +1,7 @@
-TODO HEADER 3/3
+TODO HEADER 4/4
 
-TODO 8 : have a lets play the game y/n dialog or something
-TODO 9 : if yes, then load the questions
-TODO 10 : ask for the player answer
-TODO 11 : check if the answer is correct
 TODO 12 : track current scores
 TODO 13 : track user score
-TODO 16 : have a way to clear the console para di makalat
+TODO 16 : have a way to clear the console para di makala
+TODO 17 : keep looping loading the questions until proper termination right now kasi paisa isa lang yan
+,
